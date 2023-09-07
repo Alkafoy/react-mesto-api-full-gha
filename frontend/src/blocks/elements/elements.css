@@ -1,0 +1,18 @@
+.elements {
+    max-width: 880px;
+    /* min-height: 50vh; */
+    margin: 50px auto 0;
+}
+
+@media (max-width: 899px) {
+    .elements {
+        max-width: 581px;
+    }
+}
+
+@media (max-width: 600px) {
+    .elements {
+        max-width: 282px;
+        margin: 36px auto 0;
+    }
+}

@@ -1,0 +1,24 @@
+.start-page__input {
+    margin: 0;
+    padding: 0 0 8px 0;
+    min-height: 27px;
+    box-sizing: border-box;
+    border: 0;
+    border-bottom: 2px solid #CCCCCC;
+    outline: none;
+    background-color: transparent;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.start-page__input:not(:first-child) {
+    margin-top: 30px;
+}
+
+.start-page__input::placeholder {
+    color: #CCCCCC;
+}
