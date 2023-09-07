@@ -9,8 +9,8 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.76.108
+IP-адрес 158.160.121.108
 
-Frontend https://...
+Frontend https://esergey.nomoredomainsicu.ru
 
-Backend https://...
+Backend https://api.esergey.mesto.nomoredomainsicu.ru
