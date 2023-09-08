@@ -116,6 +116,6 @@ class Api {
     }
 }
 
-const api = new Api({ baseUrl: 'http://localhost:3000' });
+const api = new Api({ baseUrl: 'https://api.esergey.mesto.nomoredomainsicu.ru' });
 
 export default api;
