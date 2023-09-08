@@ -41,12 +41,13 @@ app.use(limiter);
 
 app.use('/', mainRouter);
 
-app.use(errorLogger);
-
 // Обработчик несуществующих путей
 app.use('*', (req, res, next) => {
   next(new NotFoundError({ message: 'Запрашиваемый ресурс не найден' }));
 });
+
+app.use(errorLogger);
+
 // middleware для обработки ошибок валидации от celebrate
 app.use(errors());
 

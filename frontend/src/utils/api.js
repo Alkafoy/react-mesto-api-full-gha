@@ -14,6 +14,7 @@ class Api {
     getUserInfo(token) {
         return fetch(`${this._baseUrl}/users/me`, {
             headers: {
+                'Content-Type': 'application/json',
                 "Authorization" : `Bearer ${token}`
             }
         })
@@ -25,6 +26,7 @@ class Api {
     getInitialCards(token) {
         return fetch(`${this._baseUrl}/cards`, {
             headers: {
+                'Content-Type': 'application/json',
                 "Authorization" : `Bearer ${token}`
             }
         })

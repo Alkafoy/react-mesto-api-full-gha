@@ -45,6 +45,7 @@ function App() {
     const navigate = useNavigate();
 
     const token = localStorage.getItem('token');
+    console.log(token);
 
     useEffect(() => {
         api.getUserInfo(token)
@@ -54,12 +55,11 @@ function App() {
             .catch((error) => {
                 console.error("Ошибка при получении информации о пользователе: ", error);
             });
-
-    }, []);
+    }, [token]);
 
     useEffect(() => {
         checkToken()
-    }, [])
+    }, [token])
 
     function closeAllPopups() {
         setIsEditProfilePopupOpen(false);
@@ -125,7 +125,7 @@ function App() {
                 setCards(cardsData)
             })
             .catch(err => console.error(`Ошибка при запросе карточек ${err}`))
-    }, [])
+    }, [token])
 
     function handleCardDelete(event) {
         event.preventDefault();
@@ -190,7 +190,7 @@ function App() {
                         setEmail(r.email);
                         setIsLoggedIn(true);
                         navigate('/', {replace: true});
-                     } else {
+                    } else {
                         localStorage.removeItem('token');
                         setIsLoggedIn(false);
                     }

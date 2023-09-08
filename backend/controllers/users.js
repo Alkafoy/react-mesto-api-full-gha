@@ -36,7 +36,7 @@ module.exports.getUserById = (req, res, next) => {
 module.exports.getUserInfo = (req, res, next) => {
   User.findById(req.user._id)
     .then((user) => {
-      res.status(200).send(user);
+      res.send(user);
     })
     .catch(next);
 };
